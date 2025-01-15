@@ -57,7 +57,7 @@ def start():
         else:
             sys.exit()
 
-
+#amazon function
 def amazon():
     os.system('clear')
     print("Amazon? are you sure?...")
@@ -108,7 +108,7 @@ def amazon():
             print("Lisa: You didn't ask?")
             print("*Life is squeezed out, you are dead!!!")
             print("Lisa:They never learn. What a big dish for the boa.")
-            sys.exit()
+            goToMain()
 
     elif(choice == 2):
         print("10 minutes later...")
@@ -118,12 +118,13 @@ def amazon():
         time.sleep(1)
         print(f"{name}:There is this saying. Once life is precious.")
         print("#Lisa thinking: *such a vile man, to kill the courageous is easy, \n but the cowardly it's hard. How will i feed my baby snakes.")
-        sys.exit()
+        goToMain()
     
     else:
         print("You die, No escape to the matrix")
-        sys.exit()
+        goToMain()
 
+#africa function
 def africa():
     import random
     os.system('clear')
@@ -172,12 +173,13 @@ def africa():
                     if ans.lower == 'yes':
                         main()
                     else:
-                        sys.exit()
+                        goToMain()
         
         else:
             print("You die")
             print("Can't escape the matrix, you must accept")
 
+#australia function
 def australia():
     os.system('clear')
     print("It's australia, Where people eat snake for breakFast")
@@ -201,7 +203,7 @@ def australia():
             print("You die")
             print("Lisa and child1 stare at your carcass, \n Lisa: We all love children, never be harsh on them.")
             print("child1: mmmh")
-            sys.exit()
+            goToMain()
 
         else:
             print(f"Lisa: where should we go now {name}")
@@ -226,10 +228,21 @@ def australia():
             time.sleep(2)
             print("Lisa: You know your death comes first")
             print(f"{name}: hahaha")
-            sys.exit()
+            goToMain()
 
+#snake island function
 def snakeIsland():
     print("You die😊")
-    sys.exit()
+    goToMain()
+
+#goes back to main or exit the program in every jungle
+def goToMain():
+    print("\nGo back to main(yes/no), no to close the program")
+    choice = input()
+    if choice.lower() == 'yes':
+        main()
+    else:
+        sys.exit()    
+    
 
 main()
